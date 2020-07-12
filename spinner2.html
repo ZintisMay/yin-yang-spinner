@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    * {
+        /*outline: 1px dotted black;*/
+    }
+
+    body {
+        background-color: gray;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .yinYang{
+        position: relative;
+        width: 500px;
+        height: 500px;
+
+    }
+
+    .spin {
+        animation: spin 10s infinite;
+        animation-timing-function: linear;
+    }
+
+    .spin2 {
+        animation: spin2 10s infinite;
+        animation-timing-function: linear;
+    }
+
+    .flexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .white {
+        background-color: white;
+    }
+
+    .black {
+        background-color: black;
+    }
+
+    .sphere {
+        margin: 0 auto;
+        border-radius: 50%;
+        height: 50%;
+        width: 50%;
+    }
+
+    .big {
+        height: 100%;
+        width: 100%;
+        /*			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;*/
+    }
+
+    .subBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .half {
+        background: linear-gradient(90deg, white 50%, black 50%);
+    }
+
+    .mini {
+        height: 33.6666666666%;
+        width: 33.6666666666%;
+        /*        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);*/
+    }
+
+    /*
+    .mini.left {
+        left: 0;
+    }
+
+    .mini.right {
+        right: 0;
+    }*/
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(-360deg);
+        }
+    }
+
+    @keyframes spin2 {
+
+        from {
+            transform: rotate(90deg);
+        }
+
+        to {
+            transform: rotate(-270deg);
+        }
+    }
+    </style>
+</head>
+
+<body class="flexCenter">
+    <div class="yinYang">
+
+        <div class="sphere big spin half">
+            <div class="white sphere half spin">
+                <div class="black sphere flexCenter">
+                    <div class="sphere white"></div>
+                </div>
+                <div class="white sphere flexCenter">
+                    <div class="sphere black"></div>
+                </div>
+            </div>
+            <div class="black sphere half spin">
+                <div class="black sphere flexCenter">
+                    <div class="sphere white"></div>
+                </div>
+                <div class="white sphere flexCenter">
+                    <div class="sphere black"></div>
+                </div>
+            </div>
+
+        </div>
+                    <div class="subBox spin2">
+                <div class="white sphere half mini right spin">
+                    <div class="black sphere flexCenter">
+                        <div class="sphere white"></div>
+                    </div>
+                    <div class="white sphere flexCenter">
+                        <div class="sphere black"></div>
+                    </div>
+                </div>
+                <div class="black sphere half mini left spin">
+                    <div class="black sphere flexCenter">
+                        <div class="sphere white"></div>
+                    </div>
+                    <div class="white sphere flexCenter">
+                        <div class="sphere black"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>
