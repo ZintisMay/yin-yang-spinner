@@ -2,4 +2,4 @@
 
 A simple animation using HTML/CSS only!
 
--Version by Zintis May
+-Version by Zintis May 1.0
